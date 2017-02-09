@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        android:layout_margin="3dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:src="@drawable/no_image"
+                        android:id="@+id/img_product"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_distance"
+                    android:orientation="horizontal"
+                    android:layout_width="130dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="-35dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:rotation="-45">
+
+                    <!--<LinearLayout-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--&gt;-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="24dp"-->
+                            <!--android:background="@color/lightgray"-->
+                            <!--&gt;-->
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_gps_fixed_white_24px"
+                                android:id="@+id/imageView3" />
+
+                            <com.iused.utils.CustomFontToolbarText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 kms"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:id="@+id/txt_distance" />
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:visibility="gone"
+                        android:layout_weight="0.50"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:background="@color/lightgray"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$ 1100"
+                                android:visibility="gone"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/txt_price" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/linear_bottom_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.iused.utils.CustomFontToolbarText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="111111111111111111"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:id="@+id/txt_title" />
+
+                        <com.iused.utils.CustomFontTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Text"
+                            android:textSize="12sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/txt_used_for" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.iused.utils.CustomFontTextviewItalic
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="New Text"
+                            android:layout_weight="0.30"
+                            android:layout_gravity="center"
+                            android:textStyle="italic"
+                            android:textSize="14dp"
+                            android:id="@+id/txt_condition_donation" />
+
+                        <com.iused.utils.CustomFontToolbarText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10.3 kms"
+                            android:layout_weight="0.70"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="11dp"
+                            android:id="@+id/txt_distance_donation" />
+
+                    </LinearLayout>
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Want to Buy"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        android:id="@+id/txt_message" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/wishlist_gray"
+                        android:visibility="gone"
+                        android:id="@+id/imageView2" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

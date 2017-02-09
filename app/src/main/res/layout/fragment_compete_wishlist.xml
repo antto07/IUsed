@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_compete_wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F2F2"
+        android:contentDescription="@string/app_name"
+        android:drawSelectorOnTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"></android.support.v7.widget.RecyclerView>
+
+    <com.iused.utils.CustomFontTextview
+        android:id="@+id/txt_no_items_wishlist_compete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No items found"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+
+</LinearLayout>

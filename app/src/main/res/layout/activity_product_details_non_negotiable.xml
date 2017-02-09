@@ -1,0 +1,492 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+        <!--<android.support.design.widget.CollapsingToolbarLayout-->
+            <!--android:id="@+id/collapsing_toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:contentScrim="?attr/colorPrimary"-->
+            <!--app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_product"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:visibility="gone"-->
+                <!--app:layout_collapseMode="parallax" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="250dp"-->
+                <!--app:layout_collapseMode="parallax">-->
+
+                <!--<android.support.v4.view.ViewPager-->
+                    <!--android:id="@+id/view_pager"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/noimage"/>-->
+
+                <!--<com.viewpagerindicator.CirclePageIndicator-->
+                    <!--android:id="@+id/indicator"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:padding="5dip" />-->
+            <!--</RelativeLayout>-->
+
+
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/my_awesome_toolbar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--app:theme="@style/GalaxyZooThemeToolbarDarkOverflow"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--app:layout_collapseMode="pin" />-->
+
+        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#ffe5e5e5"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/GalaxyZooThemeToolbarDarkOverflow"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_collapseMode="parallax">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/noimage"/>
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dip" />
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginBottom="3dp"
+                        android:layout_above="@+id/indicator">
+
+                        <ImageView
+                            android:id="@+id/img_play_video"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:visibility="gone"
+                            android:src="@drawable/video_button"/>
+
+                    </LinearLayout>
+                    
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+                        <com.iused.utils.CustomFontTextview
+                            android:id="@+id/txt_product_name"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22dp"/>
+
+                        <com.iused.utils.CustomFontTextview
+                            android:id="@+id/txt_used_for"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="20 mins"/>
+
+                        <com.iused.utils.CustomFontTextviewItalic
+                            android:id="@+id/txt_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textStyle="italic"
+                            android:text="New"/>
+
+
+                        <com.iused.utils.CustomFontTextview
+                            android:id="@+id/txt_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_margin="4dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="1.2 Km(s) away"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                >
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp">
+
+                                    <com.iused.utils.CustomFontTextview
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:text="A"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp"
+                                        android:visibility="gone"
+                                        android:background="@drawable/radio_circle"
+                                        android:id="@+id/txt_name_first_letter" />
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/img_seller_image_non"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/no_image"
+                                        android:layout_gravity="center"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center">
+
+                                        <com.iused.utils.CustomFontTextview
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="---"
+                                            android:textSize="20dp"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorPrimary"
+                                            android:id="@+id/txt_name" />
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center">
+
+                                            <com.iused.utils.CustomFontTextview
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text=" is offering for "
+                                                android:textSize="18dp"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:id="@+id/textView2" />
+
+                                            <com.iused.utils.CustomFontToolbarText
+                                                android:layout_marginTop="6dp"
+                                                android:layout_marginBottom="6dp"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:textSize="18dp"
+                                                android:text="$ ---"
+                                                android:textStyle="bold"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:textColor="@color/colorPrimary"
+                                                android:id="@+id/txt_product_price" />
+                                        </LinearLayout>
+
+                                        <com.iused.utils.CustomFontTextview
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="(Fixed Price only)"
+                                            android:textSize="14dp"
+                                            android:id="@+id/textView12" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="2dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            >
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edit_text_bottom_border_green"
+                                android:gravity="center">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/edt_deadline"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:ems="10"
+                                    android:layout_margin="6dp"
+                                    android:hint="Deadline"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:text="23"
+                                    android:maxLength="2"
+                                    android:textSize="18dp"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="@color/black"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/edit_text_bottom_border_green"
+                                android:gravity="center">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/edt_deadline_type"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:ems="10"
+                                    android:editable="false"
+                                    android:enabled="false"
+                                    android:layout_margin="6dp"
+                                    android:hint="Deadline type"
+                                    android:text="Hours"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textSize="18dp"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="@color/black"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+                        <com.iused.utils.CustomFontButton
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="I'd like to buy"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/button_custom_app_color"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/btn_want_to_buy" />
+
+                        <com.iused.utils.CustomFontTextview
+                            android:layout_marginTop="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Surprise Offer"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:id="@+id/textView4" />
+
+                        <com.iused.utils.CustomFontTextview
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10dp"
+                            android:text="If paid online now, you will get 20% off"
+                            android:id="@+id/textView3" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="2dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.iused.utils.CustomFontTextview
+                            android:layout_marginTop="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Item Description"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/textView5" />
+
+                        <com.iused.utils.CustomFontTextview
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Product Description"
+                            android:textSize="18dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/txt_product_description" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+
+</LinearLayout>

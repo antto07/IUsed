@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '24.0.3'
+
+    defaultConfig {
+        applicationId "com.iused"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 49
+        versionName "1.4.9"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+
+    maven { url "https://repo.commonsware.com.s3.amazonaws.com" }
+
+    maven {
+        url "https://s3.amazonaws.com/repo.commonsware.com"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/http-core-4.1.jar')
+    compile files('libs/httpclient-4.2.jar')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.google.android.gms:play-services-auth:9.6.1'
+    compile 'com.google.firebase:firebase-core:9.6.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.google.android.gms:play-services-ads:9.6.1'
+    compile 'com.google.android.gms:play-services-gcm:9.6.1'
+    compile 'com.github.rtoshiro.fullscreenvideoview:fullscreenvideoview:1.1.2'
+    compile 'com.yovenny.VideoCompress:videocompress:1.0.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile files('libs/aws-android-sdk-2.1.7-core.jar')
+    compile files('libs/aws-android-sdk-2.1.7-s3.jar')
+    compile 'org.adw.library:discrete-seekbar:1.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

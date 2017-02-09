@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/ic_sort_white_24px"
+        android:orderInCategory="100"
+        android:title="filter"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_gps_fixed_white_24px"
+        android:orderInCategory="100"
+        android:title="filter"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/search_items"
+        android:icon="@drawable/ic_magnifying_glass"
+        android:orderInCategory="100"
+        android:title="filter"
+        app:showAsAction="always" />
+
+
+
+</menu>

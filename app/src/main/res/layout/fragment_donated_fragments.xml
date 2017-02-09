@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh_donated_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/list_donated_products"></android.support.v7.widget.RecyclerView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <com.iused.utils.CustomFontTextview
+            android:id="@+id/txt_no_donated_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="No Products Donated"
+            />
+
+
+        <com.iused.utils.CustomFontButton
+            android:id="@+id/btn_donate_product"
+            android:layout_width="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="Donate"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/settings_corner"
+            android:layout_centerHorizontal="true"
+            android:layout_height="35dp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

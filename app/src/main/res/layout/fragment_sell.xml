@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.50"
+                    android:src="@drawable/ic_photo_camera"
+                    android:id="@+id/img_add_galery" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.50"
+                    android:src="@drawable/ic_video_camera"
+                    android:id="@+id/img_add_video" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hori_scroll_view_sell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="false"
+                android:foregroundGravity="left"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/selected_photos_container_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:animateLayoutChanges="true"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <!-- images will be added dynamicall to this layout -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:layout_height="30dp"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Video Added Successfully"
+                android:id="@+id/txt_video_success_message" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="2dp"
+                    android:background="@color/white"
+                    android:layout_margin="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/relative_item_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_text_bottom_border_green"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/edt_item_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ems="10"
+                                android:layout_margin="6dp"
+                                android:hint="Item Name *"
+                                android:maxLines="1"
+                                android:textSize="18dp"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="How Old?"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.50"
+                                android:layout_margin="10dp">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edit_text_bottom_border_green"
+                                android:gravity="center">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/edt_used_time"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:ems="10"
+                                    android:layout_margin="6dp"
+                                    android:hint="Used For *"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:textSize="18dp"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="@color/colorPrimary"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/relative_used_time_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:focusable="false"
+                                android:layout_weight="0.50"
+                                android:layout_margin="10dp">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edit_text_bottom_border_green"
+                                android:gravity="center">
+
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/edt_used_time_type"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+
+                                    android:focusable="false"
+                                    android:layout_margin="6dp"
+                                    android:hint="Duration *"
+                                    android:drawableRight="@android:drawable/arrow_down_float"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:textSize="18dp"
+                                    android:background="@android:color/transparent"
+                                    android:textColor="@color/colorPrimary"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:layout_margin="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_text_bottom_border_green"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/edt_condition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ems="10"
+                                android:layout_margin="6dp"
+                                android:hint="Condition"
+                                android:inputType="text"
+
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:textSize="18dp"
+                                android:drawableRight="@android:drawable/arrow_down_float"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:layout_margin="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_text_bottom_border_green"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/edt_category"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ems="10"
+                                android:layout_margin="6dp"
+                                android:hint="Select Category *"
+                                android:inputType="text"
+
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:textSize="18dp"
+                                android:drawableRight="@android:drawable/arrow_down_float"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+                        </RelativeLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_text_bottom_border_green"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/edt_description"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:ems="10"
+                                android:layout_margin="6dp"
+                                android:hint="Item Description *"
+                                android:textSize="18dp"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/colorPrimary"
+                                />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:text="Next"
+                android:textStyle="bold"
+                android:background="@drawable/button_custom_app_color"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

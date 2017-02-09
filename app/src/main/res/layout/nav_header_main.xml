@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_header_user"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/gray1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/no_image" />
+
+    <com.iused.utils.CustomFontToolbarText
+        android:id="@+id/txt_header_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android Studio"
+        android:layout_marginLeft="8dp"
+        android:textSize="14dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <com.iused.utils.CustomFontTextview
+        android:id="@+id/txt_header_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:text="android.studio@android.com" />
+
+</LinearLayout>

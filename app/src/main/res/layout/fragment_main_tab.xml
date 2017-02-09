@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/lightgray"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_compete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.50"
+            >
+
+            <com.iused.utils.CustomFontToolbarText
+                android:id="@+id/txt_compete"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="Compete"/>
+             <LinearLayout
+                 android:visibility="gone"
+                 android:id="@+id/linear_compete_down"
+                 android:layout_width="match_parent"
+                 android:layout_height="3dp"
+                 android:orientation="vertical"
+                 android:background="@color/colorPrimary"></LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_fixed_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.50"
+            >
+
+            <com.iused.utils.CustomFontToolbarText
+                android:id="@+id/txt_fixed_price"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#808080"
+                android:text="Fixed Price"/>
+
+            <LinearLayout
+                android:id="@+id/linear_fixed_price_bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"></LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rad_negotiable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Compete"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+        <RadioButton
+            android:id="@+id/rad_non_negotiable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Fixed Price"
+            android:textColor="@drawable/rbtn_textcolor_selector" />
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linear_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="6dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/internal_rv_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/internal_vs_cancel"
+            android:layout_toStartOf="@+id/internal_vs_cancel"
+            android:background="@drawable/internal_search_shape_bg_right_8">
+
+            <include
+                layout="@layout/internal_search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/internal_iv_clear"
+                android:layout_toStartOf="@+id/internal_iv_clear" />
+
+            <ImageView
+                android:id="@+id/internal_iv_clear"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/clear"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_search_clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_bg"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_img_no_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_no_product"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/txtAdsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Right now you don't have any Products"
+            android:textColor="#9a0707"
+            android:visibility="gone" />
+
+        <!--<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:id="@+id/scrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh_compete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F2F2F2"
+                    android:contentDescription="@string/app_name"
+                    android:drawSelectorOnTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh_fixed"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_non_negotiable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F2F2F2"
+                    android:contentDescription="@string/app_name"
+                    android:drawSelectorOnTop="true"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh_no_products"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linear_no_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.iused.utils.CustomFontTextview
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No items found at this location now"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                    <com.iused.utils.CustomFontTextviewItalic
+                        android:id="@+id/txt_sell_product"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Do you want to sell any item(s)?"
+                        android:textStyle="italic"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        </LinearLayout>
+
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

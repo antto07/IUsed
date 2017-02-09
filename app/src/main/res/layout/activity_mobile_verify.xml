@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/GalaxyZooThemeToolbarDarkOverflow" />
+
+    <com.iused.utils.CustomFontTextview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Verification code"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"/>
+
+    <com.iused.utils.CustomFontTextview
+        android:id="@+id/txt_verify_message"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A verification\ncode sent to provided contact number.\nplease enter that code"
+        android:gravity="center"
+        android:textSize="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.70"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:weightSum="10">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="@drawable/edit_text_bottom_border_green"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="Enter Code"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textSize="22dp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <com.iused.utils.CustomFontButton
+            android:id="@+id/btn_submit"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Submit"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/settings_corner"/>
+
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.iused.utils.CustomFontTextview
+                android:id="@+id/txt_timer_mobile_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="00:00"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.iused.utils.CustomFontButton
+        android:id="@+id/btn_resend_code_gray"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:text="Resend Code"
+        android:textSize="17dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <com.iused.utils.CustomFontButton
+        android:id="@+id/btn_resend_code"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_custom_app_color"
+        android:text="Resend Code"
+        android:visibility="gone"
+        android:textSize="17dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>
